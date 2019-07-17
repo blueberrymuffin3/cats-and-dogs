@@ -2,7 +2,7 @@
   .text-xs-center
     input(type="file" :disabled="isLoading" @change="fileInputChange" ref="fileInput")
 
-    VBtn(:loading="isLoading" :disabled="!isValidFile" @click="analizeImage()").primary.mb-4 Analize Image
+    VBtn(:loading="isLoading" :disabled="!isValidFile" @click="analyzeImage()").primary.mb-4 Analyze Image
 
     div
       canvas(width=100 height=0 ref="imagePreview")
@@ -51,7 +51,7 @@ export default {
       tf.browser.toPixels(imageData, this.$refs.imagePreview)
       this.imageData = imageData
     },
-    async analizeImage(){
+    async analyzeImage(){
       this.isLoading = true
       await new Promise((res) => setTimeout(res))
 
