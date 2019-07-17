@@ -1,0 +1,6 @@
+*.hdf5
+*hdf5.zip
+PetImages
+backups
+.ipynb_checkpoints
+kagglecatsanddogs_3367a.zip
